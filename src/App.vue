@@ -23,8 +23,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <FormComments @comments="addComment" /> <!--@ É usado para eventos e p/ ouvir emitters-->
-  <ListComments :comments="listComments.data" /> <!-- : É usado para passar dados -->
+  <div class="container w-300">
+    <FormComments @comments="addComment" /> <!--@ É usado para eventos e p/ ouvir emitters-->
+    <ListComments :comments="listComments.data" /> <!-- : É usado para passar dados -->
+  </div>
 </template>
 
 <style scoped>

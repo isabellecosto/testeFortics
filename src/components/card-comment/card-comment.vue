@@ -16,6 +16,7 @@ const propsComment = defineProps(["comment"])
 </div>
 </template>
 
-<style lang="sass">
+<style>
+
 
 </style>

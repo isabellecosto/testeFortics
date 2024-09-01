@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Nunito", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -12,4 +12,107 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-family: "Nunito", sans-serif;
+  margin: 0 10px;
+}
+
+.w-300 {
+  width: 300px;
+  margin: auto;
+}
+
+.padding-md { 
+  padding: 1em; 
+}
+
+.form-controll {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px 8px 0px;
+  border-radius: 4px;
+  font-family: "Nunito", sans-serif;
+  margin: 10px 0;
+  color: white;
+  background-color: #242424
+}
+
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.527);
+  font-family: "Nunito", sans-serif;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  color: white;
+  background-color: #242424;
+  border: 1px solid rgba(255, 255, 255, 0.575);
+  border-radius: 4px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.527);
+  font-family: "Nunito", sans-serif;
+}
+
+.card {
+  padding: 5px;
+  margin: auto;
+  border: 1px solid rgba(255, 255, 255, 0.651);
+  box-sizing: border-box;
+}
+
+.card-name {
+  word-wrap: break-word; /* Quebra palavras longas */
+  white-space: pre-wrap; /* Preserva quebras de linha, quebra em espaços */
+  text-transform: capitalize;
+  font-size: large;
+  margin-bottom: 15px;
+
+}
+
+.card-text {
+    word-wrap: break-word; /* Quebra palavras longas */
+    white-space: pre-wrap; /* Preserva quebras de linha, quebra em espaços */
+
+}
+
+.card-data {
+  font-size: small;
+  color: rgba(255, 255, 255, 0.685);
+  display: flex;
+  justify-content: end;
+  margin: 5px;
+}
+
+.container {
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+
+
+
+
 
