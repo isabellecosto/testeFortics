@@ -1,17 +1,30 @@
 <script setup>
-import {ref} from "vue"
+import {onMounted, reactive} from "vue"
 import FormComments from "./components/form-comments/form-comments.vue"
 import ListComments from "./components/list-comments/list-comments.vue"
-const listComments = ref([])
+import {useLocalStorage} from "./composable/use-localstorage/use-locastorage.js"
+
+const {getItemLocalStorage, setItemLocalStorage} = useLocalStorage()
+let listComments = reactive({data:[]})
 const addComment = (data) => {
-  listComments.value.push(data)
-  console.log(data)
+  listComments.data.push(data)
+  setItemLocalStorage("comments", listComments.data)
 }
+
+const initData = () => {
+  const commentsData = getItemLocalStorage("comments")
+  listComments.data = commentsData ? commentsData : []
+  console.log(listComments.data)
+}
+
+onMounted(() => {
+  initData()
+})
 </script>
 
 <template>
   <FormComments @comments="addComment" /> <!--@ É usado para eventos e p/ ouvir emitters-->
-  <ListComments :comments="listComments" /> <!-- : É usado para passar dados -->
+  <ListComments :comments="listComments.data" /> <!-- : É usado para passar dados -->
 </template>
 
 <style scoped>
