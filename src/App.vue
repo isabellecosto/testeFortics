@@ -7,7 +7,7 @@ import {useLocalStorage} from "./composable/use-localstorage/use-locastorage.js"
 const {getItemLocalStorage, setItemLocalStorage} = useLocalStorage()
 let listComments = reactive({data:[]})
 const addComment = (data) => {
-  listComments.data.push(data)
+  listComments.data.unshift(data)
   setItemLocalStorage("comments", listComments.data)
 }
 
@@ -23,7 +23,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container w-300">
+  <div class="container w-600">
     <FormComments @comments="addComment" /> <!--@ É usado para eventos e p/ ouvir emitters-->
     <ListComments :comments="listComments.data" /> <!-- : É usado para passar dados -->
   </div>
