@@ -7,7 +7,7 @@ const propsComment = defineProps(['comments'])
 
 </script>
 <template>
-<div class="comment" v-for="comment in propsComment.comments">
+<div class="list-comments padding-md" v-for="comment in propsComment.comments">
     <!-- {{ propsComment.comments }} -->
     <CardComment :comment="comment" /> 
 </div>

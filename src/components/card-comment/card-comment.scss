@@ -1,0 +1,35 @@
+.card {
+    padding: 5px;
+    margin: auto;
+    border: 1px solid rgb(122, 122, 122);
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #ececec;
+    & .card-name-data {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        
+        & .card-name {
+            font-size: small;
+            font-weight: 800;
+            word-wrap: break-word; /* Quebra palavras longas */
+            white-space: pre-wrap; /* Preserva quebras de linha, quebra em espaços */
+            text-transform: capitalize;
+            margin-bottom: 15px;
+        }
+
+        & .card-text {
+            word-wrap: break-word; /* Quebra palavras longas */
+            white-space: pre-wrap; /* Preserva quebras de linha, quebra em espaços */
+        }
+
+        & .card-data {
+            font-size: small;
+            color: gray;
+            display: flex;
+            justify-content: end;
+            margin: 5px;
+        }
+    }
+}
